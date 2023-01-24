@@ -1,0 +1,28 @@
+<h3 class="header">Product List</h3>
+<div class="container">
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark table-dark">
+                <tr>
+                    <th>Blend Name</th>
+                    <th class="d-none d-md-table-cell">Intensifier</th>
+                    <th>Origin</th>
+                    <th class="d-none d-sm-table-cell">variety</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of productList">
+                    <td>{{data['blend_name']}}</td>
+                    <td class="d-none d-md-table-cell">{{data['intensifier']}}</td>
+                    <td>{{data['origin']}}</td>
+                    <td class="d-none d-sm-table-cell">{{data['variety']}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="paginator">
+        <mat-paginator (page)="handlePageEvent($event)" [length]="100" [pageSize]="pageSize" [showFirstLastButtons]="true"
+            [pageIndex]="0">
+        </mat-paginator>
+    </div>
+</div>

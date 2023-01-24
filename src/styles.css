@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+
+.header {
+    padding: 10px;
+    margin: 10px 10px;
+    text-align: center;
+}
+
+@media screen and (max-width: 375px) {
+
+    .mat-mdc-paginator-container {
+        padding: 0px !important;
+    }
+
+}
